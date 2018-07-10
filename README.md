@@ -16,4 +16,4 @@
 
 #### Use a seguinte linha para adquirir as libs necessárias:
 
-`pip install -r requires.txt`
+`pip install -r requirements.txt`
