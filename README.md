@@ -12,7 +12,7 @@
 
 #### Para gerenciar o banco de dados é usado:
 * MySql
-> Para usar MySql é preciso fazer o download do conector da linguagem python nosite oficial
+> Para usar MySql é preciso fazer o download do conector da linguagem python no site oficial
 
 #### Use a seguinte linha para adquirir as libs necessárias:
 
