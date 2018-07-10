@@ -1,7 +1,7 @@
 from urllib.request import urlopen,Request, urlretrieve
 from bs4 import BeautifulSoup
 from os import mkdir
-from scrapy.DataCollectPokemon import Pokemon
+from scrapy.GenerateUrl import generate_second_url
 
 
 
@@ -31,7 +31,7 @@ def download_image(url, id):
         td = tr.find('td',class_='cell-name')
         poke_name = td.a.string
 
-        url = Pokemon.generate_second_url(poke_name)
+        url = generate_second_url(poke_name)
         div_imagem = url.find('div', class_='profile-images')
         link_imagem = div_imagem.find('img')['src']
 
@@ -53,4 +53,4 @@ if __name__ == '__main__':
     else:
         print('conexão feita com sucesso!')
         cria_dir()
-        download_image(url_cod, 807)
+        download_image(url_cod, 1)
