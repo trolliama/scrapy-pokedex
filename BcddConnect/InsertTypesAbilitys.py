@@ -11,21 +11,22 @@ def insert_types(tipo):
     con = pymysql.connect(**CONFIG)
     cursor = con.cursor()
 
-    add_type = ("INSERT INTO tipos (tipo) values (%s)")
+    add_type = "INSERT INTO tipos(tipo) VALUES(%s)"
 
-    cursor.execute(add_type, tipo)
+    cursor.execute(add_type, (tipo))
     con.commit()
 
     cursor.close()
     con.close()
 
-def insert_types(ability):
+
+def insert_ability(ability):
     con = pymysql.connect(**CONFIG)
     cursor = con.cursor()
 
-    add_ability = ("INSERT INTO habilidades (nome_habilidade) values (%s)")
+    add_ability = "INSERT INTO habilidades(nome_habilidade) VALUES(%s)"
 
-    cursor.execute(add_ability, ability)
+    cursor.execute(add_ability, (ability))
     con.commit()
 
     cursor.close()

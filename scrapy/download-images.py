@@ -21,7 +21,7 @@ def download_image(url, id):
     Especifique a partir de qual pokémon você deseja baixar as imagens 
     informando seu id.
     """
-    for tr in url.find_all('tr', limit=806):
+    for tr in url.find_all('tr', limit=917):
         td = tr.find('td', class_='cell-num cell-fixed')  #  Alguns pokémons com a tag 'small' na primeira tag 'td'
         print(td['data-sort-value'], str(id))
         if td['data-sort-value'] != str(id):              #  são pokémons que ja passaram, no entanto com um estilo diferente,
