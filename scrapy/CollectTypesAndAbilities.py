@@ -1,6 +1,6 @@
 from urllib.request import Request,urlopen
 from bs4 import BeautifulSoup
-from BcddConnect.InsertTypesAbilitys import insert_types, insert_ability
+from BcddConnect.InsertsTables import insert_types, insert_ability
 
 
 def getHtml():
