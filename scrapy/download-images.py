@@ -1,7 +1,7 @@
 from urllib.request import urlopen,Request, urlretrieve
 from bs4 import BeautifulSoup
 from os import mkdir
-from scrapy.GenerateUrl import generate_second_url
+from GenerateUrl import GenerateUrl
 
 
 
@@ -31,7 +31,7 @@ def download_image(url, id):
         td = tr.find('td',class_='cell-name')
         poke_name = td.a.string
 
-        url = generate_second_url(poke_name)
+        url = GenerateUrl(poke_name).generate()
         div_imagem = url.find('div', class_='profile-images')
         link_imagem = div_imagem.find('img')['src']
 

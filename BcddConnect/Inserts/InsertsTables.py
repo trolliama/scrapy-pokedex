@@ -11,9 +11,9 @@ def insert_types(tipo):
     con = pymysql.connect(**CONFIG)
     cursor = con.cursor()
 
-    add_type = "INSERT INTO tipos(tipo) VALUES('%s')"
+    add_type = "INSERT INTO tipos(tipo) VALUES(%s)"
 
-    cursor.execute(add_type % (tipo))
+    cursor.execute(add_type, (tipo,))
     con.commit()
 
     print("tipo: ", tipo, "adicionado")
@@ -25,9 +25,9 @@ def insert_ability(ability):
     con = pymysql.connect(**CONFIG)
     cursor = con.cursor()
 
-    add_ability = "INSERT INTO habilidades(nome_habilidade) VALUES('%s')"
+    add_ability = "INSERT INTO habilidades(nome_habilidade) VALUES(%s)"
 
-    cursor.execute(add_ability % (ability))
+    cursor.execute(add_ability, (ability, ))
     con.commit()
 
     print("habilidade: ", ability, "adicionada")
@@ -39,9 +39,9 @@ def insert_category(category):
     con = pymysql.connect(**CONFIG)
     cursor = con.cursor()
 
-    add_category = "INSERT INTO categorias(categoria) VALUES('%s')"
+    add_category = "INSERT INTO categorias(categoria) VALUES(%s)"
 
-    cursor.execute(add_category % (category))
+    cursor.execute(add_category, (category,))
     con.commit()
 
     print("categoria: ", category, "adicionada")
