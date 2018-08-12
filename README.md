@@ -16,7 +16,7 @@
 
 ### Use a seguinte linha para adquirir as libs necessárias:
 ```
-pip install -r requirements.txt
+pip install -r requires.txt
 ```
 
 ### Comandos para coleta de dados:
@@ -47,5 +47,5 @@ python3 download-images.py
 git clone git@github.com:trolliama/pokedex.git
 ```
 ###### Observações
-> Verifique a estabilidade da sua internet, pois isto poderá ocasionar erros
+> Verifique a estabilidade da sua internet, pois isto poderá ocasionar erros <br>
 > Caso algum erro ocorra ou o programa entre em um loop, verifique sua conexão e tente novamente
