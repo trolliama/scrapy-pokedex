@@ -20,27 +20,32 @@ pip install -r requirements.txt
 ```
 
 ### Comandos para coleta de dados:
+##### Categorias
+```
+python3 mainCategory.py
+```
 
-`python3 mainCategory.py` --> Coletar *categorias*
-
-### Para coletar os tipos e as habilidades use o comando:
+##### Tipos e as habilidades
 
 ```
 python3 mainTypeAbility.py
 ```
 
-### Para coletar os dados dos pokémons use o comando:
+##### Dados dos pokémons
 ```
 python3 mainDataPoke.py
 ```
 
-### Para coletar as imagens dos pokémons use o comando abaixo:
+##### Imagens dos pokémons
 ```
 python3 download-images.py
 ```
-Será criado um diretório chamado **imagens-pokemon** onde será guardado as imagens
+> Será criado um diretório chamado **imagens-pokemon** onde será guardado as imagens
 
 #### Esse projeto faz parte do meu projeto "pokedex" feito em java que pode ser clonado a partir do comando:
 ```
 git clone git@github.com:trolliama/pokedex.git
 ```
+###### Observações
+> Verifique a estabilidade da sua internet, pois isto poderá ocasionar erros
+> Caso algum erro ocorra ou o programa entre em um loop, verifique sua conexão e tente novamente
