@@ -19,11 +19,9 @@
 pip install -r requirements.txt
 ```
 
-### Para coletar categorias você deve usar o seguinte comando:
+### Comandos para coleta de dados:
 
-```
-python3 mainCategory.py
-```
+`python3 mainCategory.py` --> Coletar *categorias*
 
 ### Para coletar os tipos e as habilidades use o comando:
 
