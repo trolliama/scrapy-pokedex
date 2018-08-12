@@ -36,9 +36,8 @@ python3 mainTypeAbility.py
 python3 mainDataPoke.py
 ```
 
-### Para coletar as imagens dos pokémons use os seguintes comandos:
+### Para coletar as imagens dos pokémons use o comando abaixo:
 ```
-cd scrapy
 python3 download-images.py
 ```
 Será criado um diretório chamado **imagens-pokemon** onde será guardado as imagens
