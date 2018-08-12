@@ -12,7 +12,7 @@ def getHtmlTypesAbilitys(URLS):
 
 def getDadosTypesAbilitys(html, url, URLS):
     for link_data in html.find_all('a'):
-        URLS[url](str(link_data.string))
+        URLS[url](str(link_data.string)) # chama a função de inserção no banco de dados
 
 
 def getCategorias(html_code):
@@ -24,7 +24,6 @@ def getCategorias(html_code):
         except KeyError:
             td = tr.find_all('td', limit=4)[-1]
             if td.find('span'):
-                print(1)
                 categoria = td.find('span').string
 
             else:

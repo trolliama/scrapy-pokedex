@@ -16,26 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tipos`
+-- Table structure for table `pokemons_categoria`
 --
 
-DROP TABLE IF EXISTS `tipos`;
+DROP TABLE IF EXISTS `pokemons_categoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tipos` (
+CREATE TABLE `pokemons_categoria` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `tipo` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `id_categoria` int(11) DEFAULT NULL,
+  `id_pokemon` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_categoria` (`id_categoria`),
+  CONSTRAINT `pokemons_categoria_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`),
+  CONSTRAINT `pokemons_categoria_ibfk_2` FOREIGN KEY (`id_categoria`) REFERENCES `pokemons` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tipos`
+-- Dumping data for table `pokemons_categoria`
 --
 
-LOCK TABLES `tipos` WRITE;
-/*!40000 ALTER TABLE `tipos` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tipos` ENABLE KEYS */;
+LOCK TABLES `pokemons_categoria` WRITE;
+/*!40000 ALTER TABLE `pokemons_categoria` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pokemons_categoria` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

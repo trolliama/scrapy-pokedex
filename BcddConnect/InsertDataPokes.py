@@ -13,7 +13,7 @@ def insert_pokes(data):
     cursor = con.cursor()
 
     data = list(map(lambda x: str(x) if x else x, data)) # Só será transformado em string se o valor não for None 'if x else x'
-    print(data)
+    
     add_pokes = "INSERT INTO pokemons(\
             id, nome, vida, ataque, defesa,\
             ataqueSp, defesaSp, velocidade,\
@@ -26,11 +26,10 @@ def insert_pokes(data):
     try:
         cursor.execute(add_pokes, data)
     except pymysql.errors.DatabaseError as e:
-        print(e)
-        print("data original: ", data)
+
         data[8] = data[8].replace(data[1], data[1][:-1]) # Replace nome do pokémon nidoran macho e fêmea na descrição
         data[1] = data[1][:-1] # Recriar nome dos pokémons NIdoran macho e fêmea
-        print('data modificada: ', data)
+        
         cursor.execute(add_pokes, data)
 
     finally:
