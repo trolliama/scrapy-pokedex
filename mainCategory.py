@@ -1,7 +1,7 @@
-from scrapy.CollectTables.coletor import getCategorias
+from scrapy.CollectIndependentTables.coletor import getCategorias
 from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
-from BcddConnect.Inserts.InsertsTables import insert_category
+from BcddConnect.InsertsTables import insert_category
 
 
 if __name__ == '__main__':

@@ -10,20 +10,15 @@ class GenerateUrl():
 
     def generate(self):
         """Função para gerar a url do segundo site usado para extrair os dados"""
-        print(self.poke_name)
+        
         try:
             reqs = Request('https://www.pokemon.com/br/pokedex/' + self.poke_name.lower(), headers={'User-Agent': 'Mozilla/5.0'})
             url = BeautifulSoup(urlopen(reqs).read(), 'html.parser')
 
-            print("segunda url criada!")
+            print("\nsegunda url criada!")
         except Exception as e:
             print('Falha na criação da segunda url: ', e)
+            print(self.poke_name)
             return None
 
         return url
-"""
-def main():
-    url2 = GenerateUrl('Nidoran♂').generate()
-    url2 = GenerateUrl('Nidoran♀').generate()
-
-main()"""
