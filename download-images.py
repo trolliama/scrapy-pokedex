@@ -5,7 +5,7 @@ from scrapy.GenerateUrl import GenerateUrl
 
 
 
-DIRNAME = './imagens-pokemon'
+DIRNAME = './imagensPokemon'
 
 def cria_dir():
     """Criação do diretório onde será baixada as imagens,
