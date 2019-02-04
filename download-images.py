@@ -1,7 +1,7 @@
 from urllib.request import urlopen,Request, urlretrieve
 from bs4 import BeautifulSoup
 from os import mkdir
-from scrapy.GenerateUrl import GenerateUrl
+from scrapy import GenerateUrl
 
 
 
